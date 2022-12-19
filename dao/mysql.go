@@ -29,7 +29,7 @@ func init() {
 	//空闲连接最大存活时间
 	db.SetConnMaxIdleTime(time.Minute * 1)
 	err = db.Ping()
-	fmt.Println("db: ===",db)
+	fmt.Println("db: ===", db)
 	if err != nil {
 		log.Println("数据库无法连接")
 		_ = db.Close()
