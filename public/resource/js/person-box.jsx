@@ -28,21 +28,25 @@ fetch(url, {
   
     return (
       <div class="personal-box">
-        <img class="personal-avatar" src={data.Avatar} alt={data.UserName} />
+        <img class="personal-avatar" style={{"object-fit":"cover"}} src={data.Avatar} alt={data.UserName} />
         <p class="personal-name">{data.UserName}</p>
         <p class="personal-desc">{data.UserDesc}</p>
         <span class="gap-dashed"></span>
         <ul class="personal-action">
           <li>
+            <i class="iconfont icon-github"></i>
+            <a href={data.github} target="_blank"> github</a>
+          </li>
+          <li>
             <i class="iconfont icon-bilibili-line"></i>
             <a href={data.Bilibili} target="_blank"> Bilibili</a>
           </li>
-
           <li>
             <i class="iconfont icon-zhihu-circle"></i>
             <a href={data.zhihu} target="_blank"> 知乎</a>
-            
           </li>
+          
+
 
         </ul>
         <span class="gap-solid"></span>

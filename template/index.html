@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="//at.alicdn.com/t/font_3180954_chol8bk1q14.css" />
   <link rel="stylesheet" href="/resource/css/index.css" />
   <link rel="icon" href="{{.Icon}}" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
@@ -32,8 +32,8 @@
 </head>
 
 <body>
-  <!-- <div id="header-admin"></div> -->
-  {{template "header1" .}}
+  <div id="header-admin"></div>
+  <!-- {{template "header1" .}} -->
   <div class="mainPage">
     {{template "main" .}}
   </div>
