@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{.Description}}" />
+  <title>{{.Title}}</title>
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2974461_sdshp7jo1jj.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_3180954_chol8bk1q14.css" />
+  <link rel="stylesheet" href="/resource/css/index.css" />
+  <link rel="icon" href="{{.Icon}}" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Vendor CSS Files -->
+    <link href="/resource/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resource/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/resource/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/resource/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/resource/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/resource/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/resource/vendor/simple-datatables/style.css" rel="stylesheet">
+  
+    <link href="/resource/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <!-- <div id="header-admin"></div> -->
+  {{template "header1" .}}
+  <div class="mainPage">
+    {{template "main" .}}
+  </div>
+
+  {{template "footer" .}}
+
+  <script type="text/babel" src="/resource/js/header-admin.jsx"></script>
+
+
+
+              <!-- Vendor JS Files -->
+  <script src="/resource/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/resource/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/resource/vendor/chart.js/chart.min.js"></script>
+  <script src="/resource/vendor/echarts/echarts.min.js"></script>
+  <script src="/resource/vendor/quill/quill.min.js"></script>
+  <script src="/resource/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/resource/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/resource/vendor/php-email-form/validate.js"></script>
+    
+    <!-- Template Main JS File -->
+  <script src="/resource/vendor/main.js"></script>
+
+</body>
+
+<script src="/resource/js/index.js"></script>
+
+</html>

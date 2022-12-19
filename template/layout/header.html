@@ -1,0 +1,56 @@
+{{define "header"}}
+<header>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <h1>
+                    <a href="/">
+                        <img class="logo-img" src="{{.Logo}}" alt="{{.Title}}-LOGO" />
+                    </a>
+                </h1>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        {{range $index,$elem := .Navigation}} {{if isODD $index}}
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{getNextName $.Navigation $index}}">{{$elem}}</a>
+                        </li>
+                        {{end}} {{end}}
+                    </ul>
+
+                    <div class="header-search">
+                        <input id="search-input" type="text" placeholder="搜索一下" />
+                        <i class="iconfont icon-search"></i>
+                        <div class="search-drop"></div>
+                    </div>
+
+                    <a class="login-action" href="/login">
+                        <button class="login-btn" id="login-btn">登录</button>
+                    </a>
+                    <div class="login-end dropdown">
+                        <p class="iconfont icon-yonghu">
+                            <span class="login-username dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></span>
+                        </p>
+
+                        <ul class=" login-drop  dropdown-menu">
+                            <li><a class="dropdown-item" href="/userinfo">用户信息</a></li>
+                            <li><a class="dropdown-item" href="/writing">写作</a></li>
+                            <li><a class="dropdown-item" href="/login-out">退出登录</a></li>
+                        </ul>
+                    
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+{{ end }}
