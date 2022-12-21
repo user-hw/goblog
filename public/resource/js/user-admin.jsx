@@ -148,9 +148,27 @@ function NavSelect() {
                 <span>安全设置</span>
                 </a>
             </li>
+            <li class="nav-item">
+              <a className={ "nav-link collapsed"}  onClick={Click.bind(this, "Dashboard")}>
+              <i class="bi bi-grid"></i>
+              <span>Dashboard</span>
+              </a>
+            </li>
             </div>
     );
 }
+
+
+var TOKEN_KEY = "AUTH_TOKEN";
+var USER_KEY = "USER_INFO";
+function test(){
+  if (localStorage.getItem(TOKEN_KEY)) {
+    console.log(localStorage.getItem(USER_KEY))
+  }else{
+    console.log("没有找到token")
+  }
+}
+test()
 
 
 ReactDOM.render(<UserInfo />, document.querySelector("#app"));

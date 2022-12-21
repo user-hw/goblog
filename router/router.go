@@ -1,7 +1,6 @@
 package router
 
 import (
-	"fmt"
 	"goblog/api"
 	"goblog/views"
 	"html/template"
@@ -9,20 +8,11 @@ import (
 	"os"
 )
 
-func Test(w http.ResponseWriter, r *http.Request) {
-	t := template.New("test.html")
+func Admin(w http.ResponseWriter, r *http.Request) {
+	t := template.New("admin.html")
 	path, _ := os.Getwd()
-	fmt.Printf("path: %v\n", path)
-	t, _ = t.ParseFiles(path + "/template/test.html")
-
-	t.Execute(w, "")
-}
-
-func Testforms(w http.ResponseWriter, r *http.Request) {
-	t := template.New("forms-layouts.html")
-	path, _ := os.Getwd()
-	fmt.Printf("path: %v\n", path)
-	t, _ = t.ParseFiles(path + "/template/forms-layouts.html")
+	// fmt.Printf("path: %v\n", path)
+	t, _ = t.ParseFiles(path + "/template/admin.html")
 
 	t.Execute(w, "")
 }
@@ -39,8 +29,8 @@ func Router() {
 	http.HandleFunc("/pigeonhole/", views.HTML.Pigeonhole)
 	// http.HandleFunc("/userinfo/", views.HTML.UserInfo)
 
-	http.HandleFunc("/test/", Test)
-	http.HandleFunc("/test/forms-layouts", Testforms)
+	http.HandleFunc("/admin/", Admin)
+	// http.HandleFunc("/test/forms-layouts", Testforms)
 
 	http.HandleFunc("/api/v1/post", api.API.SaveAndUpdatePost)
 	http.HandleFunc("/api/v1/post/", api.API.GetPost)

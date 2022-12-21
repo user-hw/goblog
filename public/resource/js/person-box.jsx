@@ -45,9 +45,6 @@ fetch(url, {
             <i class="iconfont icon-zhihu-circle"></i>
             <a href={data.zhihu} target="_blank"> 知乎</a>
           </li>
-          
-
-
         </ul>
         <span class="gap-solid"></span>
   
