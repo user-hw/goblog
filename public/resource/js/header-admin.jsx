@@ -233,7 +233,7 @@ function HeaderAdmin(){
               </li>
 
               <li>
-                <a class="dropdown-item d-flex align-items-center" href="/login-out">
+                <a class="dropdown-item d-flex align-items-center" href="/" onClick={LoginOut}>
                   <i class="bi bi-box-arrow-right"></i>
                   <span>Sign Out</span>
                 </a>
@@ -248,6 +248,16 @@ function HeaderAdmin(){
       </div> 
     );
 }
+
+function LoginOut(){
+  localStorage.removeItem(USER_KEY);
+  localStorage.removeItem(TOKEN_KEY);
+  $(".login-action").show();
+  $(".login-end").hide();
+  window.location.replace("/");
+  console.log("退出登录");
+}
+
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
