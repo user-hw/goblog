@@ -1,7 +1,6 @@
 
 function HeaderAdmin(){
  
-  console.log("调用了函数"+"HeaderAdmin")  
   return(   
     <div> 
       <link rel="stylesheet" href="/resource/css/index.css" />
