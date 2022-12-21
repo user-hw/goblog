@@ -60,12 +60,7 @@ function UserInfo() {
                   <UserComName  comName="知乎"/>
                   <UserComName  comName="B站"/>
                   <UserComName  comName="Github"/>
-                  
 
-                  
-                    
-                    
-                    
                     <fieldset class="row mb-3">
                       <legend class="col-form-label col-sm-2 pt-0">性别</legend>
                       <div class="col-sm-10">
@@ -113,16 +108,6 @@ function ThridApp() {
     );
 }
 
-// function Select(props) {
-
-//     if (props === "用户数据1") {
-//         ReactDOM.render(<FirstApp />, document.querySelector("#app"));
-//     } else if (props === "用户数据2") {
-//         ReactDOM.render(<SecondApp />, document.querySelector("#app"));
-//     } else {
-//         return <ThridApp />;
-//     }
-// }
 
 function Click(props,event) {
     if (props === "个人信息") {
@@ -166,9 +151,13 @@ function test(){
     console.log(localStorage.getItem(USER_KEY))
   }else{
     console.log("没有找到token")
+    window.location.replace("/login");
+    console.log("退出登录");
   }
 }
 test()
+
+
 
 
 ReactDOM.render(<UserInfo />, document.querySelector("#app"));
