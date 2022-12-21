@@ -30,7 +30,6 @@ func Router() {
 	// http.HandleFunc("/userinfo/", views.HTML.UserInfo)
 
 	http.HandleFunc("/admin/", Admin)
-	// http.HandleFunc("/test/forms-layouts", Testforms)
 
 	http.HandleFunc("/api/v1/post", api.API.SaveAndUpdatePost)
 	http.HandleFunc("/api/v1/post/", api.API.GetPost)
